@@ -25,7 +25,6 @@
 }
 
 .css1 {
-    position: absolute;
     display: flex;
     /* flex-direction: row-reverse; */
     width: 800px;
@@ -34,8 +33,13 @@
     justify-content: center;
 }
 
+.css1:hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
 .css2 {
-    position: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
