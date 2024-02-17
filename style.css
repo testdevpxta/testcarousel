@@ -1,0 +1,64 @@
+.css {
+    display: none;
+    width: 100%;
+    /* position: absolute; */
+    top: 0;
+    animation: fadeIn 1s;
+    align-items: center;
+    justify-content: center;
+}
+
+.css img {
+    width: 700px;
+    height: 516px;
+    object-fit: cover;
+    /* display: none; */
+    border-radius: 21px;
+}
+
+.css h2 {
+    width: 700px;
+    height: 516px;
+    object-fit: cover;
+    /* display: none; */
+    border-radius: 21px;
+}
+
+.css1 {
+    display: flex;
+    /* flex-direction: row-reverse; */
+    width: 800px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.css2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cssBtns {
+    padding: 8px 30px;
+    margin-top: 13px;
+    background-color: #f3c33a;
+    border: none;
+    color: black;
+    border-radius: 20px;
+}
+
+.active {
+    display: flex;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
