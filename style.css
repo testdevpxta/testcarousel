@@ -25,6 +25,7 @@
 }
 
 .css1 {
+    position: absolute;
     display: flex;
     /* flex-direction: row-reverse; */
     width: 800px;
@@ -34,6 +35,7 @@
 }
 
 .css2 {
+    position: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
