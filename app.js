@@ -14,11 +14,13 @@ function loadedImages() {
                 console.log(imageID)
                 layout += `
                 <div class="css ${index === 0 ? 'active' : ''}">
-                    <img src="https://lh3.googleusercontent.com/d/${imageID}"
+                    <img class="cssImg" src="https://lh3.googleusercontent.com/d/${imageID}"
                         alt="">
                 </div>`;
             });
+            document.getElementById("loader").style.display = "none";
             document.getElementById("renderImage").innerHTML = layout;
+            document.getElementById("renderImage").style.display = "block";
         })
 }
 
@@ -60,9 +62,9 @@ function imageSwitch(a) {
     }
 }
 
+let interval = setInterval(imageSwitch, 5000)
 function loop() {
     let img = document.querySelector(".css2")
-    let interval = setInterval(imageSwitch, 5000)
 
     img.addEventListener("mousedown", function () {
         clearInterval(interval)
@@ -72,3 +74,24 @@ function loop() {
     })
 }
 loop()
+
+let imageStatus = "NotZoomed";
+const imageZoom = () => {
+    let images = document.querySelectorAll(".cssImg");
+    if (imageStatus === "NotZoomed") {
+        images.forEach((e) => {
+            e.style.width = "250%";
+            clearInterval(interval)
+        })
+        imageStatus = "Zoomed";
+    } else if (imageStatus === "Zoomed") {
+        images.forEach((e) => {
+            e.style.width = "100%";
+            interval = setInterval(imageSwitch, 5000)
+        })
+        imageStatus = "NotZoomed";
+    }
+
+}
+
+
